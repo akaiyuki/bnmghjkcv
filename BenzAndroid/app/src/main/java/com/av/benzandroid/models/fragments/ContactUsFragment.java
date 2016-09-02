@@ -102,7 +102,12 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         TextView txtTitle = (TextView) toolbar.findViewById(R.id.title);
-        txtTitle.setText(BSingleton.getTextTitle());
+        txtTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
         mButtonFloating = (ImageView) findViewById(R.id.floatingicon);
@@ -254,6 +259,14 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
 
         dialog.show();
 
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+            super.onBackPressed();
 
     }
 
