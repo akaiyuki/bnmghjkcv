@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +47,39 @@ public class RequestFragment extends Fragment {
         mEditCompany = (EditText) view.findViewById(R.id.editcompany);
         mEditMobile = (EditText) view.findViewById(R.id.editmobile);
         mEditDebt = (EditText) view.findViewById(R.id.editdebt);
+
+        mEditMobile.setText("+65 9002");
+        Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
+
+
+        mEditMobile.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!s.toString().contains("+65 9002")){
+                    mEditMobile.setText("+65 9002");
+                    Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
+
+                }
+
+            }
+        });
+
+
+
 
         mButtonSend = (Button) view.findViewById(R.id.buttonsend);
 

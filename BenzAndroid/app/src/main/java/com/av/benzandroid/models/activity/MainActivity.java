@@ -22,11 +22,9 @@ import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.holder.StringHolder;
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 
@@ -56,43 +54,17 @@ public class MainActivity extends BaseActivity {
         setFrameLayout(R.id.frame_container);
 
 
+        BEngine.switchFragment(INSTANCE, new CompanyFragment(), getFrameLayout());
+
 
         // Create a few sample profile
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
-//        final IProfile profile = new ProfileDrawerItem().withName("Sample").withEmail("sample@gmail.com").withIcon("https://avatars3.githubusercontent.com/u/1476232?v=3&s=460").withIdentifier(100);
-
 
         // Create the AccountHeader
         headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withTranslucentStatusBar(true)
-                .withHeaderBackground(R.drawable.businessphoto)
-//                .addProfiles(
-////                        profile
-//                        //don't ask but google uses 14dp for the add account icon in gmail but 20dp for the normal icons (like manage account)
-////                        new ProfileSettingDrawerItem().withName("Add Account").withDescription("Add new GitHub Account").withIcon(new IconicsDrawable(this, GoogleMaterial.Icon.gmd_plus).actionBar().paddingDp(5).colorRes(R.color.material_drawer_primary_text)).withIdentifier(PROFILE_SETTING),
-////                        new ProfileSettingDrawerItem().withName("Manage Account").withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(100001)
-//                )
-//                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
-//                    @Override
-//                    public boolean onProfileChanged(View view, IProfile profile, boolean current) {
-//                        //sample usage of the onProfileChanged listener
-//                        //if the clicked item has the identifier 1 add a new profile ;)
-//                        if (profile instanceof IDrawerItem && profile.getIdentifier() == PROFILE_SETTING) {
-//                            int count = 100 + headerResult.getProfiles().size() + 1;
-////                            IProfile newProfile = new ProfileDrawerItem().withNameShown(true).withName("AV Dev" + count).withEmail("dev" + count + "@gmail.com").withIdentifier(count);
-//                            if (headerResult.getProfiles() != null) {
-//                                //we know that there are 2 setting elements. set the new profile above them ;)
-////                                headerResult.addProfile(newProfile, headerResult.getProfiles().size() - 2);
-//                            } else {
-////                                headerResult.addProfiles(newProfile);
-//                            }
-//                        }
-//
-//                        //false if you have not consumed the event and it should close the drawer
-//                        return false;
-//                    }
-//                })
+                .withHeaderBackground(R.drawable.benzlogo)
                 .withSavedInstance(savedInstanceState)
                 .build();
 
@@ -104,29 +76,13 @@ public class MainActivity extends BaseActivity {
                 .withHasStableIds(true)
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName("The Company").withIdentifier(1).withIcon(R.drawable.ic_company).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
-                        new PrimaryDrawerItem().withName("Our Services").withIdentifier(2).withIcon(R.drawable.ic_services).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
-                        new PrimaryDrawerItem().withName("Request").withIdentifier(3).withIcon(R.drawable.ic_request).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
-                        new PrimaryDrawerItem().withName("Blog").withIdentifier(4).withIcon(R.drawable.ic_blog).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
-                        new PrimaryDrawerItem().withName("FAQs").withIdentifier(5).withIcon(R.drawable.ic_faqs).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("The Company").withIdentifier(1).withIcon(R.drawable.ic_company_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("Our Services").withIdentifier(2).withIcon(R.drawable.ic_services_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("Request").withIdentifier(3).withIcon(R.drawable.ic_request_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("Blog").withIdentifier(4).withIcon(R.drawable.ic_blog_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("FAQs").withIdentifier(5).withIcon(R.drawable.ic_faqs_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
 
-                        new PrimaryDrawerItem().withName("Contact Us").withIdentifier(6).withIcon(R.drawable.ic_contact).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
-
-
-//                        new PrimaryDrawerItem().withName("Contact Us").withIdentifier(4).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
-//                        new SectionDrawerItem().withName("Copyright 2016")
-
-
-//                        new SecondaryDrawerItem().withName("open source").withIdentifier(20).withSelectable(false),
-//                        new SecondaryDrawerItem().withName("open source").withIdentifier(21).withTag("Bullhorn"),
-//                        new DividerDrawerItem()
-//                        new SwitchDrawerItem().withName("Switch").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener),
-//                        new SwitchDrawerItem().withName("Switch2").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false),
-//                        new ToggleDrawerItem().withName("Toggle").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener),
-//                        new DividerDrawerItem(),
-//                        new SecondarySwitchDrawerItem().withName("Secondary switch").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener),
-//                        new SecondarySwitchDrawerItem().withName("Secondary Switch2").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false),
-//                        new SecondaryToggleDrawerItem().withName("Secondary toggle").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener)
+                        new PrimaryDrawerItem().withName("Contact Us").withIdentifier(6).withIcon(R.drawable.ic_contact_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
                 ) // add the items we want to use with our Drawer
 
 
@@ -139,28 +95,11 @@ public class MainActivity extends BaseActivity {
                         //--> click on the footer
                         //those items don't contain a drawerItem
 
-//                        if (drawerItem != null) {
-//                            Intent intent = null;
-//                            if (drawerItem.getIdentifier() == 1) {
-//                                intent = new Intent(MainActivity.this, CompanyActivity.class);
-//
-//                            } else if (drawerItem.getIdentifier() == 2) {
-//                                intent = new Intent(MainActivity.this, ServicesActivity.class);
-//                            }
-//                             else if (drawerItem.getIdentifier() == 4) {
-//                                    intent = new Intent(MainActivity.this, ContactUsActivity.class);
-//                                }
-//                            if (intent != null) {
-//                                MainActivity.this.startActivity(intent);
-//                            }
-//                        }
-
                         if (drawerItem != null) {
                             if (drawerItem.getIdentifier() == 1) {
                                BEngine.switchFragment(INSTANCE, new CompanyFragment(), getFrameLayout());
                                 BSingleton.setTextTitle("The Company");
                                 toolbar.setTitle("The Company");
-
                             } else if (drawerItem.getIdentifier() == 2) {
                                BEngine.switchFragment(INSTANCE, new ServicesFragment(), getFrameLayout());
                                 BSingleton.setTextTitle("Our Services");
@@ -205,12 +144,8 @@ public class MainActivity extends BaseActivity {
         if (savedInstanceState == null) {
             // set the selection to the item with the identifier 11
             result.setSelection(21, false);
-
-            //set the active profile
-//            headerResult.setActiveProfile(profile);
         }
 
-//        result.updateBadge(4, new StringHolder(10 + ""));
 
     }
 

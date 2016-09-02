@@ -67,6 +67,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/editemail"
+            android:inputType="textEmailAddress"
             android:hint="Email*"/>
 
         <EditText
@@ -84,16 +85,30 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:inputType="number"
             android:id="@+id/editmobile"
             android:hint="Mobile"/>
 
-        <EditText
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:text="Recover Debt from XYZ Bank"/>-->
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
             android:text="Recover Debt from XYZ Bank"/>
+
+
 
         <EditText
             android:layout_width="match_parent"

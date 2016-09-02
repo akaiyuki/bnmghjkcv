@@ -99,6 +99,7 @@ public class FaqsFragment extends Fragment {
         listItem = new ListItem("When should you engage the services of a Singapore debt recovery agency?" +
                 "\n" +
                 "\n" +
+                "\n" +
                 "Having a reliable debt collection agency is a cheaper option compared to " +
                 "pursuing a legal remedy, that is, going to the courts and filing a claim. " +
                 "Moreover, hiring a debt collector will produce faster results because an " +
