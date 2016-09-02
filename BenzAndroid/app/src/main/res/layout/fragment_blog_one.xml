@@ -1,0 +1,71 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.av.benzandroid.models.fragments.BlogOneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bannerblog1"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/txtblog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Older workers hit hardest as more laid off in Singapore: MOM report"
+        android:textSize="18sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="11dp"
+            android:text="SINGAPORE: More people in Singapore were laid off last year, with older workers hit the hardest,figures released by the Ministry of Manpower (MOM) on Wednesday (Apr 20) showed."/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:text="A total of 15,580 workers were laid off in 2015, a jump from the 12,930 laid off the previous year, according to the ministry’s annual Redundancy and Re-entry into Employment report."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="11dp"
+            android:text="Among residents made redundant, those aged 40 and above formed the majority at 65 per cent. PMETs (professionals, managers, executives and technicians) were also more vulnerable, with 8.9 layoffs per 1,000 employees compared to the overall 7.4."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="11dp"
+            android:text="Overall, residents were less vulnerable to lay-offs compared to foreigners, with the incidence of redundancy among residents at 7.1 layoffs per 1,000 employees lower than foreigners at 7.7 per 1,000."/>
+
+
+    </LinearLayout>
+
+</ScrollView>
