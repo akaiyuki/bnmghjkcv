@@ -7,7 +7,17 @@
     android:fitsSystemWindows="true"
     app:popupTheme="@style/MyCustomToolbarTheme">
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Benz Recovery"
+        android:textSize="22sp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        android:textColor="@color/colorAccent"/>
 
 
 </android.support.v7.widget.Toolbar>

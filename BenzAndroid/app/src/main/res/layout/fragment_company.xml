@@ -342,14 +342,15 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Competitive Rates"
-                        android:textSize="16sp" />
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Offered"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -373,15 +374,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:text="Experienced Singapore"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Debt Collector"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -421,14 +423,15 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Fairness and"
-                        android:textSize="16sp" />
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Transparency"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -453,14 +456,15 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Debtors' Background"
-                        android:textSize="16sp" />
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="Check"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -499,15 +503,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:text="Proven track record in"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="recovering back debts"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -531,22 +536,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:text="Well-versed in both"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="personal and corporate"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="debts"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -584,15 +590,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:text="Committed with integrity"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="and perseverance"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -615,16 +622,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:gravity="center_horizontal"
                         android:text="Provide clients updates"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="on the account status"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 

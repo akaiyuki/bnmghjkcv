@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 
 import com.av.benzandroid.functions.BEngine;
+import com.av.benzandroid.functions.BSingleton;
 import com.av.benzandroid.functions.core.BaseActivity;
 import com.av.benzandroid.models.fragments.BlogFragment;
 import com.av.benzandroid.models.fragments.CompanyFragment;
@@ -37,6 +38,8 @@ public class MainActivity extends BaseActivity {
     private Drawer result = null;
     public static MainActivity INSTANCE = null;
 
+    private  Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +49,7 @@ public class MainActivity extends BaseActivity {
         INSTANCE = this;
 
         // Handle Toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //set frame layout
@@ -64,32 +67,32 @@ public class MainActivity extends BaseActivity {
                 .withActivity(this)
                 .withTranslucentStatusBar(true)
                 .withHeaderBackground(R.drawable.businessphoto)
-                .addProfiles(
-//                        profile
-                        //don't ask but google uses 14dp for the add account icon in gmail but 20dp for the normal icons (like manage account)
-//                        new ProfileSettingDrawerItem().withName("Add Account").withDescription("Add new GitHub Account").withIcon(new IconicsDrawable(this, GoogleMaterial.Icon.gmd_plus).actionBar().paddingDp(5).colorRes(R.color.material_drawer_primary_text)).withIdentifier(PROFILE_SETTING),
-//                        new ProfileSettingDrawerItem().withName("Manage Account").withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(100001)
-                )
-                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
-                    @Override
-                    public boolean onProfileChanged(View view, IProfile profile, boolean current) {
-                        //sample usage of the onProfileChanged listener
-                        //if the clicked item has the identifier 1 add a new profile ;)
-                        if (profile instanceof IDrawerItem && profile.getIdentifier() == PROFILE_SETTING) {
-                            int count = 100 + headerResult.getProfiles().size() + 1;
-//                            IProfile newProfile = new ProfileDrawerItem().withNameShown(true).withName("AV Dev" + count).withEmail("dev" + count + "@gmail.com").withIdentifier(count);
-                            if (headerResult.getProfiles() != null) {
-                                //we know that there are 2 setting elements. set the new profile above them ;)
-//                                headerResult.addProfile(newProfile, headerResult.getProfiles().size() - 2);
-                            } else {
-//                                headerResult.addProfiles(newProfile);
-                            }
-                        }
-
-                        //false if you have not consumed the event and it should close the drawer
-                        return false;
-                    }
-                })
+//                .addProfiles(
+////                        profile
+//                        //don't ask but google uses 14dp for the add account icon in gmail but 20dp for the normal icons (like manage account)
+////                        new ProfileSettingDrawerItem().withName("Add Account").withDescription("Add new GitHub Account").withIcon(new IconicsDrawable(this, GoogleMaterial.Icon.gmd_plus).actionBar().paddingDp(5).colorRes(R.color.material_drawer_primary_text)).withIdentifier(PROFILE_SETTING),
+////                        new ProfileSettingDrawerItem().withName("Manage Account").withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(100001)
+//                )
+//                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
+//                    @Override
+//                    public boolean onProfileChanged(View view, IProfile profile, boolean current) {
+//                        //sample usage of the onProfileChanged listener
+//                        //if the clicked item has the identifier 1 add a new profile ;)
+//                        if (profile instanceof IDrawerItem && profile.getIdentifier() == PROFILE_SETTING) {
+//                            int count = 100 + headerResult.getProfiles().size() + 1;
+////                            IProfile newProfile = new ProfileDrawerItem().withNameShown(true).withName("AV Dev" + count).withEmail("dev" + count + "@gmail.com").withIdentifier(count);
+//                            if (headerResult.getProfiles() != null) {
+//                                //we know that there are 2 setting elements. set the new profile above them ;)
+////                                headerResult.addProfile(newProfile, headerResult.getProfiles().size() - 2);
+//                            } else {
+////                                headerResult.addProfiles(newProfile);
+//                            }
+//                        }
+//
+//                        //false if you have not consumed the event and it should close the drawer
+//                        return false;
+//                    }
+//                })
                 .withSavedInstance(savedInstanceState)
                 .build();
 
@@ -155,18 +158,29 @@ public class MainActivity extends BaseActivity {
                         if (drawerItem != null) {
                             if (drawerItem.getIdentifier() == 1) {
                                BEngine.switchFragment(INSTANCE, new CompanyFragment(), getFrameLayout());
+                                BSingleton.setTextTitle("The Company");
+                                toolbar.setTitle("The Company");
 
                             } else if (drawerItem.getIdentifier() == 2) {
                                BEngine.switchFragment(INSTANCE, new ServicesFragment(), getFrameLayout());
+                                BSingleton.setTextTitle("Our Services");
+                                toolbar.setTitle("Our Services");
                             } else if (drawerItem.getIdentifier() == 3) {
                                 BEngine.switchFragment(INSTANCE, new RequestFragment(), getFrameLayout());
+                                BSingleton.setTextTitle("Request");
+                                toolbar.setTitle("Request");
                             } else if (drawerItem.getIdentifier() == 4){
                                 BEngine.switchFragment(INSTANCE, new BlogFragment(), getFrameLayout());
+                                BSingleton.setTextTitle("Blog");
+                                toolbar.setTitle("Blog");
                             } else if (drawerItem.getIdentifier() == 5){
                                 BEngine.switchFragment(INSTANCE, new FaqsFragment(), getFrameLayout());
+                                BSingleton.setTextTitle("FAQs");
+                                toolbar.setTitle("FAQs");
                             }
                             else if (drawerItem.getIdentifier() == 6) {
                                startActivity(new Intent(MainActivity.this, ContactUsFragment.class));
+                                BSingleton.setTextTitle("Contact Us");
 //                                BEngine.switchFragment(INSTANCE, new ContactUsFragment(), getFrameLayout());
                             }
 
