@@ -11,11 +11,15 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -23,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -174,14 +179,76 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_pop_up);
 
+        final EditText mEditName = (EditText) dialog.findViewById(R.id.editname);
+        final EditText mEditEmail = (EditText) dialog.findViewById(R.id.editemail);
+        final EditText mEditCompany = (EditText) dialog.findViewById(R.id.editcompany);
+        final EditText mEditMobile = (EditText) dialog.findViewById(R.id.editmobile);
+        final EditText mEditMessage = (EditText) dialog.findViewById(R.id.editmessage);
 
-//        Button mButtonSubmit = (Button) dialog.findViewById(R.id.button_submit);
-//        mButtonSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dialog.dismiss();
-//            }
-//        });
+
+        mEditMobile.setText("+65 9002");
+        Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
+        mEditMobile.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!s.toString().contains("+65 9002")){
+                    mEditMobile.setText("+65 9002");
+                    Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
+
+                }
+
+            }
+        });
+
+
+
+        Button mButtonSubmit = (Button) dialog.findViewById(R.id.button_submit);
+        mButtonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mEditName.getText().length() != 0 && mEditEmail.getText().length() != 0
+                        && mEditMessage.getText().length() != 0){
+
+                    Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND, Uri.fromParts(
+                            "mailto","abc@gmail.com", null));
+
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"info@benzrecovery.com.sg"});
+
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Debt Recovery Write Message");
+
+                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,
+                            "Name: "+mEditName.getText().toString()+
+                                    "  Email: "+mEditEmail.getText().toString()+
+                                    "  Mobile: "+mEditMobile.getText().toString()+
+                                    "  Company: "+mEditCompany.getText().toString()+
+                                    "  Debt Message: "+mEditMessage.getText().toString());
+
+                    emailIntent.setType("message/rfc822");
+
+                    startActivity(Intent.createChooser(emailIntent, "Choose an Email client :"));
+
+                }
+
+
+                dialog.dismiss();
+
+            }
+        });
 
 
 

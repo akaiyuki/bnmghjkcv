@@ -43,6 +43,7 @@
 
 
         <EditText
+            android:id="@+id/editname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -54,6 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/editemail"
+            android:inputType="textEmailAddress"
             android:hint="Email*"/>
 
         <EditText
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/editcompany"
             android:hint="Company"/>
 
         <EditText
@@ -68,6 +72,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="number"
+            android:id="@+id/editmobile"
             android:hint="Mobile"/>
 
         <TextView
@@ -81,6 +88,7 @@
             android:text="Recover Debt from XYZ Bank"/>
 
         <EditText
+            android:id="@+id/editmessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
