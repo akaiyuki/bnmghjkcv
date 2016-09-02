@@ -18,16 +18,19 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.av.benzandroid.R;
 import com.av.benzandroid.functions.BSingleton;
+import com.av.benzandroid.functions.CustomScrollView;
 import com.av.benzandroid.models.activity.MainActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,6 +56,8 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     private GoogleMap mMap;
 
     private ImageView mButtonFloating;
+
+    public CustomScrollView scrollView;
 
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -103,6 +108,17 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
             }
         });
 
+        scrollView = (CustomScrollView) findViewById(R.id.scrollView);
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativelayout);
+        relativeLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                scrollView.setEnableScrolling(true);
+                return false;
+            }
+        });
+
+
 
         INSTANCE = this;
 
@@ -112,8 +128,8 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     @Override
     public void onMapReady(GoogleMap map) {
 
-        double latitude = 14.55828;
-        double longitude = 121.0547;
+        double latitude = 1.28449;
+        double longitude = 103.85116;
 
         direction = new LatLng(latitude, longitude);
 
@@ -131,12 +147,24 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(latitude, longitude))
-                .zoom(10)
+                .zoom(12)
                 .build();
 
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
     }
+
+
+//    public boolean onTouch(View view, MotionEvent event) {
+//        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//            ((LoadModelRenderer) mRenderer).getObjectAt(event.getX(), event.getY());
+//
+//            DesignBoxActivity.INSTANCE.scrollView.setEnableScrolling(false);
+//
+//        }
+//
+//        return getActivity().onTouchEvent(event);
+//    }
 
 
 
