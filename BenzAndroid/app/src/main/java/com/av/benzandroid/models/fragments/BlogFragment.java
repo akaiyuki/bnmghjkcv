@@ -61,6 +61,13 @@ public class BlogFragment extends Fragment {
             }
         });
 
+        mTextBlog2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BEngine.switchFragment((BaseActivity) getActivity(), new BlogTwoFragment(), MainActivity.INSTANCE.getFrameLayout());
+            }
+        });
+
 
         return view;
     }

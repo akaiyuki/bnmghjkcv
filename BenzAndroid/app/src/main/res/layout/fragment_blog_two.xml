@@ -1,0 +1,85 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.av.benzandroid.models.fragments.BlogTwoFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bannerblog2"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:id="@+id/txtblog2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Samsung Pay to launch in Singapore in Quarter 2 2016"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="25dp"
+            android:text="SINGAPORE: Samsung Electronics will launch mobile payment service Samsung Pay in the second quarter of 2016, Samsung announced in a media release on Wednesday (Apr 20)."/>
+
+        <TextView
+            android:layout_marginRight="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:text="With the service, Samsung mobile users will be able to tap their phones to make purchases at places where credit and debit cards are accepted."/>
+
+
+        <TextView
+            android:layout_marginRight="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:text="Payment networks MasterCard and Visa, and major banks such as DBS, OCBC and Standard Chartered, will be be part of the service, said Samsung, with American Express “coming soon” after the second quarter."/>
+
+        <TextView
+            android:layout_marginRight="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:text="Partnering retailers and merchants will also be trained in preparation for the launch, it added, while there will be a beta usage trial of the service ahead of launch."/>
+
+
+        <TextView
+            android:layout_marginRight="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:text="The announcement comes after Apple rolled out a similar electronic payment service, Apple Pay, on Tuesday (Apr 19). When Apple Pay launched, only American Express was available, while Visa later said that they would join the service soon."/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
