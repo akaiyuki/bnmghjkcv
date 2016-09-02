@@ -29,36 +29,15 @@
         android:layout_marginRight="10dp"
         android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="25dp"
-            android:text="A total of 15,580 workers were laid off in 2015, a jump"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="25dp"
-            android:text="from the 12,930 laid off the previous year, according to"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="25dp"
-            android:text="figures from the ministry's Redundancy and Re-entry"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="11dp"
             android:layout_marginLeft="25dp"
-            android:text="into Employment 2015 report."/>
+            android:text="A total of 15,580 workers were laid off in 2015, a jump from the 12,930 laid off the previous year, according to figures from the ministry’s Redundancy and Re-entry into Employment 2015 report."/>
 
 
         <LinearLayout
@@ -109,17 +88,17 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_comment"/>
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/ic_comment"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="4 comments"
-                    android:textSize="16sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="4 comments"-->
+                    <!--android:textSize="16sp" />-->
             </LinearLayout>
 
         </LinearLayout>
@@ -144,26 +123,14 @@
             android:layout_marginRight="10dp"
             android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="25dp"
-            android:text="Samsung has partnered American Express, MasterCard"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="11dp"
             android:layout_marginLeft="25dp"
-            android:text="and Visa, and major banks such as DBS, OCBC and"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="25dp"
-            android:text="Standard Chartered"/>
+            android:text="Samsung has partnered American Express, MasterCard and Visa, and major banks such as DBS, OCBC and Standard Chartered."/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -213,17 +180,17 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_comment"/>
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/ic_comment"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="4 comments"
-                    android:textSize="16sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="4 comments"-->
+                    <!--android:textSize="16sp" />-->
             </LinearLayout>
 
         </LinearLayout>
