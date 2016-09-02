@@ -2,6 +2,9 @@ package com.av.benzandroid.models.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +40,7 @@ public class MainActivity extends BaseActivity {
     public static MainActivity INSTANCE = null;
 
     private  Toolbar toolbar;
+    Fragment fragment = null;
 
 
     @Override
@@ -97,23 +101,28 @@ public class MainActivity extends BaseActivity {
 
                         if (drawerItem != null) {
                             if (drawerItem.getIdentifier() == 1) {
-                               BEngine.switchFragment(INSTANCE, new CompanyFragment(), getFrameLayout());
+                                fragment = new CompanyFragment();
+                               BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("The Company");
                                 toolbar.setTitle("The Company");
                             } else if (drawerItem.getIdentifier() == 2) {
-                               BEngine.switchFragment(INSTANCE, new ServicesFragment(), getFrameLayout());
+                                fragment = new ServicesFragment();
+                               BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("Our Services");
                                 toolbar.setTitle("Our Services");
                             } else if (drawerItem.getIdentifier() == 3) {
-                                BEngine.switchFragment(INSTANCE, new RequestFragment(), getFrameLayout());
+                                fragment = new RequestFragment();
+                                BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("Request");
                                 toolbar.setTitle("Request");
                             } else if (drawerItem.getIdentifier() == 4){
-                                BEngine.switchFragment(INSTANCE, new BlogFragment(), getFrameLayout());
+                                fragment = new BlogFragment();
+                                BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("Blog");
                                 toolbar.setTitle("Blog");
                             } else if (drawerItem.getIdentifier() == 5){
-                                BEngine.switchFragment(INSTANCE, new FaqsFragment(), getFrameLayout());
+                                fragment = new FaqsFragment();
+                                BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("FAQs");
                                 toolbar.setTitle("FAQs");
                             }
@@ -147,6 +156,8 @@ public class MainActivity extends BaseActivity {
         }
 
 
+
+
     }
 
 
@@ -178,6 +189,7 @@ public class MainActivity extends BaseActivity {
             result.closeDrawer();
         } else {
             super.onBackPressed();
+
         }
     }
 

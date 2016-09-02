@@ -14,9 +14,9 @@ public class BEngine {
     public static void switchFragment(BaseActivity baseActivity, Fragment fragment, int frame) {
 
         FragmentManager fm = baseActivity.getSupportFragmentManager();
-
+        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(frame, fragment);
+        transaction.add(frame, fragment);
         transaction.addToBackStack(fragment.getClass().toString());
         transaction.commit();
     }
