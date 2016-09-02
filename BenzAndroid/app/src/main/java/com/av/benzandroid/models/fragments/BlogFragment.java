@@ -1,6 +1,7 @@
 package com.av.benzandroid.models.fragments;
 
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,8 @@ import android.widget.TextView;
 import com.av.benzandroid.R;
 import com.av.benzandroid.functions.BEngine;
 import com.av.benzandroid.functions.core.BaseActivity;
+import com.av.benzandroid.models.activity.BlogOneActivity;
+import com.av.benzandroid.models.activity.BlogTwoActivity;
 import com.av.benzandroid.models.activity.MainActivity;
 
 /**
@@ -57,14 +60,20 @@ public class BlogFragment extends Fragment {
         mTextBlog1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BEngine.switchFragment((BaseActivity) getActivity(), new BlogOneFragment(), MainActivity.INSTANCE.getFrameLayout());
+//                BEngine.switchFragment((BaseActivity) getActivity(), new BlogOneFragment(), MainActivity.INSTANCE.getFrameLayout());
+
+            startActivity(new Intent(getActivity(), BlogOneActivity.class));
+
             }
         });
 
         mTextBlog2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BEngine.switchFragment((BaseActivity) getActivity(), new BlogTwoFragment(), MainActivity.INSTANCE.getFrameLayout());
+//                BEngine.switchFragment((BaseActivity) getActivity(), new BlogTwoFragment(), MainActivity.INSTANCE.getFrameLayout());
+
+                startActivity(new Intent(getActivity(), BlogTwoActivity.class));
+
             }
         });
 
