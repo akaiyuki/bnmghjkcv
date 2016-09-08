@@ -21,16 +21,16 @@
             </intent-filter>
         </activity>
 
-        <!-- sample for live map -->
-        <!-- <meta-data -->
-        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
-        <!-- android:value="AIzaSyC19Mc6alM6jX0RJ4-IwiZ_cTF15CsqlhE" /> -->
+        <!-- sample for live google map -->
+         <!--<meta-data-->
+         <!--android:name="com.google.android.maps.v2.API_KEY"-->
+         <!--android:value="AIzaSyDjszBft21m16gLe2lK-TF-BJOcaGKSNTk" />-->
 
 
-        <!-- sample for debug map -->
+        <!-- sample for debug google map -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCnxgYvWcwSimgPeLcOxhf21Og5DWPC4n4" />
+            android:value="AIzaSyCukctAbVDQHZMLPh6J3LrL4sWj051IycE" />
 
         <activity android:name=".models.activity.SplashScreenActivity">
             <intent-filter>

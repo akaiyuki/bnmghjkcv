@@ -177,8 +177,8 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     @Override
     public void onMapReady(GoogleMap map) {
 
-        double latitude = 1.28449;
-        double longitude = 103.85116;
+        double latitude = 1.2846288;
+        double longitude = 103.8487802;
 
         direction = new LatLng(latitude, longitude);
 
@@ -196,7 +196,7 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(latitude, longitude))
-                .zoom(12)
+                .zoom(16)
                 .build();
 
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
