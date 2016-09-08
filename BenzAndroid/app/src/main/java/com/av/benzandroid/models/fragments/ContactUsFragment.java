@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -19,7 +20,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.Selection;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -61,6 +67,9 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     private GoogleMap mMap;
 
     private ImageView mButtonFloating;
+
+    private TextView mTextContact;
+    private TextView mTextEmail;
 
     public CustomScrollView scrollView;
 
@@ -128,6 +137,21 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
             }
         });
 
+
+        mTextContact = (TextView) findViewById(R.id.txtcontact);
+        mTextEmail = (TextView) findViewById(R.id.txtemail);
+
+        String contact = "+65 9002 4367";
+        String contactUs = "Contact Us at ";
+
+        SpannableString spanString = new SpannableString(contact);
+        spanString.setSpan(new UnderlineSpan(), 0, spanString.length(), 0);
+        spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
+        spanString.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanString.length(), 0);
+
+
+
+        mTextContact.setText(spanString);
 
 
         INSTANCE = this;

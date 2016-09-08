@@ -1,22 +1,20 @@
 <com.av.benzandroid.functions.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@color/colorAccent"
     android:id="@+id/scrollView"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
 
 
     <RelativeLayout
+        android:id="@+id/relativelayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativelayout">
+        android:layout_height="wrap_content">
 
 
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar_contact" />
-
-
 
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,12 +27,12 @@
             tools:context="com.av.benzandroid.models.fragments.ContactUsFragment" />
 
         <ImageView
+            android:id="@+id/floatingicon"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
-            android:id="@+id/floatingicon"
-            android:src="@drawable/ic_floating"/>
+            android:src="@drawable/ic_floating" />
 
 
         <TextView
@@ -64,11 +62,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider1"
+            android:layout_marginBottom="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="1dp"
             android:baselineAligned="false"
-            android:layout_marginBottom="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -94,12 +92,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginRight="1dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingTop="5dp"
-                android:layout_marginTop="20dp">
+                android:paddingTop="5dp">
 
                 <TextView
+                    android:id="@+id/txtcontact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_mobile"
@@ -114,12 +113,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginRight="1dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingTop="5dp"
-                android:layout_marginTop="20dp">
+                android:paddingTop="5dp">
 
                 <TextView
+                    android:id="@+id/txtemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_email"
@@ -128,7 +128,6 @@
                     android:textSize="16sp" />
 
             </LinearLayout>
-
 
 
         </LinearLayout>
