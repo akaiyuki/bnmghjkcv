@@ -45,7 +45,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".models.activity.BlogOneActivity" />
-        <activity android:name=".models.activity.BlogTwoActivity"></activity>
+        <activity android:name=".models.activity.BlogTwoActivity" />
+        <activity android:name=".models.activity.WriteMessageActivity"></activity>
     </application>
 
 </manifest>

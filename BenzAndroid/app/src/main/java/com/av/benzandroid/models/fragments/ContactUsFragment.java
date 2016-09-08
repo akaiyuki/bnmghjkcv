@@ -43,6 +43,7 @@ import com.av.benzandroid.R;
 import com.av.benzandroid.functions.BSingleton;
 import com.av.benzandroid.functions.CustomScrollView;
 import com.av.benzandroid.models.activity.MainActivity;
+import com.av.benzandroid.models.activity.WriteMessageActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -123,7 +124,10 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
         mButtonFloating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialogMessage();
+//                showDialogMessage();
+
+                startActivity(new Intent(ContactUsFragment.this, WriteMessageActivity.class));
+
             }
         });
 
