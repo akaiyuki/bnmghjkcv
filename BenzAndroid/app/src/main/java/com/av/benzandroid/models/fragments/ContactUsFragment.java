@@ -145,18 +145,29 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
         mTextContact = (TextView) findViewById(R.id.txtcontact);
         mTextEmail = (TextView) findViewById(R.id.txtemail);
 
-        String contact = "+65 9002 4367";
-        String contactUs = "Contact Us at ";
+        mTextContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String callForwardString = "+6590024367";
+                Intent intentCallForward = new Intent(Intent.ACTION_DIAL); // ACTION_CALL
+                Uri uri2 = Uri.fromParts("tel", callForwardString, "#");
+                intentCallForward.setData(uri2);
+                startActivity(intentCallForward);
+            }
+        });
 
-        SpannableString spanString = new SpannableString(contact);
-        spanString.setSpan(new UnderlineSpan(), 0, spanString.length(), 0);
-        spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
-        spanString.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanString.length(), 0);
+        mTextEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent send = new Intent(Intent.ACTION_SENDTO);
+                String uriText = "mailto:" + Uri.encode("info@benzrecovery.com.sg") +
+                        "?subject=" + Uri.encode("Inquire");
+                Uri uri = Uri.parse(uriText);
 
-
-
-        mTextContact.setText(spanString);
-
+                send.setData(uri);
+                startActivity(Intent.createChooser(send, "Send mail..."));
+            }
+        });
 
         INSTANCE = this;
 
