@@ -26,6 +26,7 @@ public class RequestFragment extends Fragment {
     private EditText mEditCompany;
     private EditText mEditMobile;
     private EditText mEditDebt;
+    private EditText mEditSubject;
 
     private Button mButtonSend;
 
@@ -47,6 +48,7 @@ public class RequestFragment extends Fragment {
         mEditCompany = (EditText) view.findViewById(R.id.editcompany);
         mEditMobile = (EditText) view.findViewById(R.id.editmobile);
         mEditDebt = (EditText) view.findViewById(R.id.editdebt);
+        mEditSubject = (EditText) view.findViewById(R.id.editsubject);
 
         mEditMobile.setText("+65 9002");
         Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
@@ -88,14 +90,14 @@ public class RequestFragment extends Fragment {
             public void onClick(View view) {
 
                 if (mEditName.getText().length() != 0 && mEditEmail.getText().length() != 0
-                        && mEditDebt.getText().length() != 0){
+                        && mEditMobile.getText().length() != 0){
 
                     Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND, Uri.fromParts(
                             "mailto","abc@gmail.com", null));
 
                     emailIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"info@benzrecovery.com.sg"});
 
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Debt Recovery Submission Request");
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, mEditSubject.getText().toString());
 
                     emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,
                             "Name: "+mEditName.getText().toString()+
