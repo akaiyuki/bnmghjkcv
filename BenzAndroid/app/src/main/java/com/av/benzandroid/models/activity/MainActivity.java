@@ -86,7 +86,9 @@ public class MainActivity extends BaseActivity {
                         new PrimaryDrawerItem().withName("Blog").withIdentifier(4).withIcon(R.drawable.ic_blog_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
                         new PrimaryDrawerItem().withName("FAQs").withIdentifier(5).withIcon(R.drawable.ic_faqs_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
 
-                        new PrimaryDrawerItem().withName("Contact Us").withIdentifier(6).withIcon(R.drawable.ic_contact_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
+                        new PrimaryDrawerItem().withName("Contact Us").withIdentifier(6).withIcon(R.drawable.ic_contact_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
+                        new PrimaryDrawerItem().withName("Online Payment").withIdentifier(7).withIcon(R.drawable.ic_services_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
+
                 ) // add the items we want to use with our Drawer
 
 
@@ -130,6 +132,8 @@ public class MainActivity extends BaseActivity {
                                startActivity(new Intent(MainActivity.this, ContactUsFragment.class));
                                 BSingleton.setTextTitle("Contact Us");
 //                                BEngine.switchFragment(INSTANCE, new ContactUsFragment(), getFrameLayout());
+                            } else if (drawerItem.getIdentifier() == 7){
+                                startActivity(new Intent(MainActivity.this, OnlinePaymentActivity.class));
                             }
 
                         }

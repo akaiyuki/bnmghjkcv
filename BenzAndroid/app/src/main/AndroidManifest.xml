@@ -14,7 +14,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".models.activity.MainActivity"
+        <activity
+            android:name=".models.activity.MainActivity"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,15 +25,14 @@
         </activity>
 
         <!-- sample for live google map -->
-         <meta-data
-         android:name="com.google.android.maps.v2.API_KEY"
-         android:value="AIzaSyC19Mc6alM6jX0RJ4-IwiZ_cTF15CsqlhE" />
-
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC19Mc6alM6jX0RJ4-IwiZ_cTF15CsqlhE" />
 
         <!-- sample for debug google map -->
-        <!--<meta-data-->
-            <!--android:name="com.google.android.maps.v2.API_KEY"-->
-            <!--android:value="AIzaSyCukctAbVDQHZMLPh6J3LrL4sWj051IycE" />-->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyCukctAbVDQHZMLPh6J3LrL4sWj051IycE" /> -->
 
         <activity android:name=".models.activity.SplashScreenActivity">
             <intent-filter>
@@ -50,11 +50,15 @@
         </activity>
         <activity android:name=".models.activity.BlogOneActivity" />
         <activity android:name=".models.activity.BlogTwoActivity" />
-        <activity android:name=".models.activity.WriteMessageActivity"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:name=".models.activity.WriteMessageActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="89bc3dbbfe1de6c6da190923ba110735ea54a999" />
+
+        <activity android:name=".models.activity.OnlinePaymentActivity"></activity>
     </application>
 
 </manifest>
