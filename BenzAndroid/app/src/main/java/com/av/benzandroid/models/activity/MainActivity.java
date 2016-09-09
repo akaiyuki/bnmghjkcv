@@ -73,6 +73,7 @@ public class MainActivity extends BaseActivity {
                 .build();
 
 
+
         //Create the drawer
         result = new DrawerBuilder()
                 .withActivity(this)
@@ -87,7 +88,7 @@ public class MainActivity extends BaseActivity {
                         new PrimaryDrawerItem().withName("FAQs").withIdentifier(5).withIcon(R.drawable.ic_faqs_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
 
                         new PrimaryDrawerItem().withName("Contact Us").withIdentifier(6).withIcon(R.drawable.ic_contact_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight)),
-                        new PrimaryDrawerItem().withName("Online Payment").withIdentifier(7).withIcon(R.drawable.ic_services_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
+                        new PrimaryDrawerItem().withName("Online Payment").withIdentifier(7).withIcon(R.drawable.ic_pay_selection).withSelectable(true).withSelectedTextColor(getResources().getColor(R.color.colorHighlight))
 
                 ) // add the items we want to use with our Drawer
 
@@ -100,6 +101,7 @@ public class MainActivity extends BaseActivity {
                         //--> click on the header
                         //--> click on the footer
                         //those items don't contain a drawerItem
+
 
                         if (drawerItem != null) {
                             if (drawerItem.getIdentifier() == 1) {
@@ -156,7 +158,7 @@ public class MainActivity extends BaseActivity {
         //only set the active selection or active profile if we do not recreate the activity
         if (savedInstanceState == null) {
             // set the selection to the item with the identifier 11
-            result.setSelection(21, false);
+            result.setSelection(1, false);
         }
 
 
