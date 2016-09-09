@@ -68,13 +68,15 @@ public class FaqsFragment extends Fragment {
     }
 
     private void mockItems() {
-        final int COLLAPSED_HEIGHT_1 = 150, COLLAPSED_HEIGHT_2 = 250, COLLAPSED_HEIGHT_3 = 300;
-        final int EXPANDED_HEIGHT_1 = 250, EXPANDED_HEIGHT_2 = 300, EXPANDED_HEIGHT_3 = 350, EXPANDED_HEIGHT_4 = 700, EXPANDED_HEIGHT_5 = 1100;
+        final int COLLAPSED_HEIGHT_1 = 290, COLLAPSED_HEIGHT_2 = 250, COLLAPSED_HEIGHT_3 = 410;
+        final int EXPANDED_HEIGHT_1 = 250, EXPANDED_HEIGHT_2 = 300, EXPANDED_HEIGHT_3 = 350, EXPANDED_HEIGHT_4 = 700, EXPANDED_HEIGHT_5 = 1220;
 
-        ListItem listItem = new ListItem("" +
+        ListItem listItem = new ListItem("\n" +
                 "Are we offering legal advice as well?" +
                 "\r\n" +
                 "\r\n" +
+                "\n" +
+                "\n" +
                 "No, Benz Recovery Pte Ltd does not provide legal advice since we are not " +
                 "funcioning as a law firm. However, when we devise our strategies for debt " +
                 "collection and when we discuss them with you, we have an in-house legal " +
@@ -85,18 +87,25 @@ public class FaqsFragment extends Fragment {
         listItem.setUp(COLLAPSED_HEIGHT_1, EXPANDED_HEIGHT_5, false);
         listItems.add(listItem);
 
-        listItem = new ListItem("Should the debt be of certain amount before you can avail of the" +
+        listItem = new ListItem("\n" +
+                "Should the debt be of certain amount before you can avail of the" +
                 "services of a Singapore debt collection agency?" +
+                "\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "You should engage the services of a debt collector as soon as possible. The longer " +
                 "the time is from the start of the arrears to the day an action was " +
-                "taken to collect the debt, the lesser the chance of recovering the funds.");
+                "taken to collect the debt, the lesser the chance of recovering the funds." +
+                "\n" +
+                "\n");
         // setUp IS REQUIRED
         listItem.setUp(COLLAPSED_HEIGHT_3, EXPANDED_HEIGHT_5, false);
         listItems.add(listItem);
 
-        listItem = new ListItem("When should you engage the services of a Singapore debt recovery agency?" +
+        listItem = new ListItem("\n" +
+                "When should you engage the services of a Singapore debt recovery agency?" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "\n" +
@@ -104,12 +113,18 @@ public class FaqsFragment extends Fragment {
                 "pursuing a legal remedy, that is, going to the courts and filing a claim. " +
                 "Moreover, hiring a debt collector will produce faster results because an " +
                 "agency gets intouch with your debtor as soon as you engage the service. " +
-                "Every minute from then on is spent collecting your funds.");
+                "Every minute from then on is spent collecting your funds." +
+                "\n" +
+                "\n" +
+                "");
         // setUp IS REQUIRED
         listItem.setUp(COLLAPSED_HEIGHT_3, EXPANDED_HEIGHT_5, false);
         listItems.add(listItem);
 
-        listItem = new ListItem("Why should you choose Benz Recovery Pte Ltd?" +
+        listItem = new ListItem("\n" +
+                "Why should you choose Benz Recovery Pte Ltd?" +
+                "\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "Benz Recovery Pte Ltd is the best agency to collect your funds because: " +
@@ -122,18 +137,26 @@ public class FaqsFragment extends Fragment {
                 "\n" +
                 "- Our incomparable reputation precedes us, and " +
                 "\n" +
-                "- Our services are available in the entire Singapore.");
+                "- Our services are available in the entire Singapore." +
+                "\n" +
+                "\n" +
+                "");
         // setUp IS REQUIRED
         listItem.setUp(COLLAPSED_HEIGHT_1, EXPANDED_HEIGHT_5, false);
         listItems.add(listItem);
 
-        listItem = new ListItem("What information is required for a successful debt recovery?" +
+        listItem = new ListItem("\n" +
+                "What information is required for a successful debt recovery?" +
+                "\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "The information necessary to collect a debt differ in every case. However, we " +
                 "initially need the full name of the debtor, last known address, and copies " +
                 "of all prior communications with the debtor. Other additional requirements " +
-                "will be requested from you in the course of the collection.");
+                "will be requested from you in the course of the collection." +
+                "\n" +
+                "\n");
         // setUp IS REQUIRED
         listItem.setUp(COLLAPSED_HEIGHT_1, EXPANDED_HEIGHT_5, false);
         listItems.add(listItem);

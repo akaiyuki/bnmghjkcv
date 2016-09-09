@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_location"
                     android:drawablePadding="10dp"
-                    android:text="1 Raffles Place #44-02. One Raffles Place, Singapore, 048616"
+                    android:text="143 Cecil Street #16-03 GB Building Singapore 069542"
                     android:textSize="16sp" />
 
             </LinearLayout>
