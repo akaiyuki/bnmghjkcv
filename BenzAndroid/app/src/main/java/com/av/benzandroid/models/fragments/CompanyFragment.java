@@ -80,10 +80,10 @@ public class CompanyFragment extends Fragment {
 
             mDemoSlider.addSlider(textSliderView);
         }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Fade);
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(3000);
+        mDemoSlider.setDuration(5000);
 
 
         linear1 = (LinearLayout) view.findViewById(R.id.linearone);
