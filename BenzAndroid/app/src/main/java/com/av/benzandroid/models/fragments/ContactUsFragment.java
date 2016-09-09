@@ -177,8 +177,8 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     @Override
     public void onMapReady(GoogleMap map) {
 
-        double latitude = 1.2846288;
-        double longitude = 103.8487802;
+        double latitude = 1.2842969;
+        double longitude = 103.8510638;
 
         direction = new LatLng(latitude, longitude);
 
