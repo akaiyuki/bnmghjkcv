@@ -17,6 +17,7 @@ import com.av.benzandroid.models.fragments.BlogFragment;
 import com.av.benzandroid.models.fragments.CompanyFragment;
 import com.av.benzandroid.models.fragments.ContactUsFragment;
 import com.av.benzandroid.R;
+import com.av.benzandroid.models.fragments.FaqFragment;
 import com.av.benzandroid.models.fragments.FaqsFragment;
 import com.av.benzandroid.models.fragments.RequestFragment;
 import com.av.benzandroid.models.fragments.ServicesFragment;
@@ -125,7 +126,7 @@ public class MainActivity extends BaseActivity {
                                 BSingleton.setTextTitle("Blog");
                                 toolbar.setTitle("Blog");
                             } else if (drawerItem.getIdentifier() == 5){
-                                fragment = new FaqsFragment();
+                                fragment = new FaqFragment();
                                 BEngine.switchFragment(INSTANCE, fragment, getFrameLayout());
                                 BSingleton.setTextTitle("FAQs");
                                 toolbar.setTitle("FAQs");

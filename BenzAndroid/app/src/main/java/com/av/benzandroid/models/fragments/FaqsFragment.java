@@ -69,7 +69,7 @@ public class FaqsFragment extends Fragment {
 
     private void mockItems() {
         final int COLLAPSED_HEIGHT_1 = 290, COLLAPSED_HEIGHT_2 = 250, COLLAPSED_HEIGHT_3 = 440;
-        final int EXPANDED_HEIGHT_1 = 250, EXPANDED_HEIGHT_2 = 300, EXPANDED_HEIGHT_3 = 350, EXPANDED_HEIGHT_4 = 700, EXPANDED_HEIGHT_5 = 1220;
+        final int EXPANDED_HEIGHT_1 = 250, EXPANDED_HEIGHT_2 = 300, EXPANDED_HEIGHT_3 = 350, EXPANDED_HEIGHT_4 = 700, EXPANDED_HEIGHT_5 = 1200;
 
         ListItem listItem = new ListItem("\n" +
                 "Are we offering legal advice as well?" +

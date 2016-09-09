@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.av.benzandroid.models.fragments.FaqsFragment">
+    tools:context="com.av.benzandroid.models.fragments.FaqFragment">
 
 
     <TextView
@@ -27,13 +28,25 @@
         android:background="@color/colorPrimaryDark" />
 
 
-    <ListView
-        android:id="@+id/list"
+    <!--<net.cachapa.expandablelayout.ExpandableLayout-->
+        <!--android:id="@+id/expandable_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:el_duration="1000"-->
+        <!--app:el_expanded="true"-->
+        <!--app:el_translate_children="true">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="16dp"-->
+            <!--android:text="Fixed height" />-->
+
+    <!--</net.cachapa.expandablelayout.ExpandableLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="15dp"
-        android:dividerHeight="3dp" >
-    </ListView>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
