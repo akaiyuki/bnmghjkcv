@@ -41,7 +41,7 @@ public class WriteMessageActivity extends BaseActivity {
         final EditText mEditMessage = (EditText) findViewById(R.id.editmessage);
 
 
-        mEditMobile.setText("+65 9002");
+        mEditMobile.setText("+65 ");
         Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
         mEditMobile.addTextChangedListener(new TextWatcher() {
 

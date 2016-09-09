@@ -50,7 +50,7 @@ public class RequestFragment extends Fragment {
         mEditDebt = (EditText) view.findViewById(R.id.editdebt);
         mEditSubject = (EditText) view.findViewById(R.id.editsubject);
 
-        mEditMobile.setText("+65 9002");
+        mEditMobile.setText("+65 ");
         Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
 
 
