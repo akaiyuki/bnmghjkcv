@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginRight="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
 
         <include
             android:id="@+id/app_bar"
@@ -70,6 +71,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:focusableInTouchMode="true"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"/>
 
@@ -88,6 +90,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="5dp"
+            android:focusableInTouchMode="true"
             android:inputType="number"
             android:id="@+id/editmobile"/>
 
@@ -106,6 +109,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="5dp"
+            android:focusableInTouchMode="true"
             android:id="@+id/editemail"
             android:inputType="textEmailAddress"/>
 
@@ -123,6 +127,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            android:focusableInTouchMode="true"
             android:layout_marginTop="5dp"
             android:id="@+id/editcompany"/>
 
@@ -142,6 +147,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            android:focusableInTouchMode="true"
             android:layout_marginTop="5dp"/>
 
 

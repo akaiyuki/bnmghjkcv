@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
 
     <TextView
         android:layout_width="match_parent"
@@ -48,6 +49,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/editname"
+            android:focusableInTouchMode="true"
             android:hint="Name*"/>
 
         <EditText
@@ -58,6 +60,7 @@
             android:layout_marginBottom="20dp"
             android:id="@+id/editemail"
             android:inputType="textEmailAddress"
+            android:focusableInTouchMode="true"
             android:hint="Email*"/>
 
         <EditText
@@ -66,6 +69,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:focusableInTouchMode="true"
             android:id="@+id/editcompany"
             android:hint="Company"/>
 
@@ -75,6 +79,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:focusableInTouchMode="true"
             android:inputType="number"
             android:id="@+id/editmobile"
             android:hint="Contact No. *"/>
@@ -94,6 +99,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:focusableInTouchMode="true"
             android:id="@+id/editsubject"
             android:hint="Subject"/>
 
@@ -104,6 +110,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:focusableInTouchMode="true"
             android:id="@+id/editdebt"
             android:hint="Debt Amount"
             android:inputType="number"/>
