@@ -30,7 +30,7 @@
         <com.daimajia.slider.library.Indicators.PagerIndicator
             android:id="@+id/custom_indicator"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="178dp"
             android:gravity="center"
             custom:selected_color="#0095BF"
             custom:unselected_color="#55333333"
@@ -107,61 +107,55 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="4dp"
+                android:lineSpacingExtra="10dp"
                 android:textSize="15sp"
-                android:text="Benz Recovery Pte Ltd is an experienced "/>
+                android:text="Benz Recovery Pte Ltd is an experienced company specializing in debt consolidation and debt recovery."/>
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="5dp"
+                android:lineSpacingExtra="10dp"
                 android:textSize="15sp"
-                android:text="company specializing in debt consolidation"/>
+                android:text="We are an experienced company specialising in debt consolidation and debt recovery. Providing good service among individuals as well as business entities."/>
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="5dp"
+                android:lineSpacingExtra="10dp"
                 android:textSize="15sp"
-                android:text="and debt recovery."/>
+                android:text="We work closely with our clients in providing hassle free solutions to our clients by ensuring a successful results. Our team of debt collectors will make sure that we provide the service in accordance with the Singapore Law."/>
+
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="5dp"
+                android:lineSpacingExtra="10dp"
                 android:textSize="15sp"
-                android:text="We are an experienced company specialising in"/>
+                android:text="We uphold the highest integrity and act with confidentiality and professionalism that protects your reputation. You can be assured that we will always operate under a strict code of practice."/>
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="debt consolidation and debt recovery. Providing"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="good service among individuals as well as business"/>
 
 
             <TextView
@@ -170,106 +164,7 @@
                 android:layout_marginBottom="50dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="entities."/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="We work closely with our clients in providing hassle"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="free solutions to our clients by ensuring a successful"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="results. Our team of debt collectors will make sure"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="that we provide the service in accordance with the"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="Singapore Law."/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="We uphold the highest integrity and act with"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="confidentiality and professionalism that protects"/>
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="your reputation. You can be assured that we will"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15sp"
-                android:text="always operate under a strict code of practice."/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
                 android:textSize="15sp"
                 android:text="We look forward to be of service to you!"/>
 

@@ -1,59 +1,48 @@
-package com.av.benzandroid.models.fragments;
-
+package com.av.benzandroid.models.activity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.av.benzandroid.R;
+import com.av.benzandroid.functions.core.BaseActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class RequestFragment extends Fragment {
-
-    private EditText mEditName;
-    private EditText mEditEmail;
-    private EditText mEditCompany;
-    private EditText mEditMobile;
-    private EditText mEditDebt;
-    private EditText mEditSubject;
-
-    private Button mButtonSend;
-
-
-    public RequestFragment() {
-        // Required empty public constructor
-    }
-
+public class WriteMessageActivity extends BaseActivity {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_request, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write_message);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        TextView txtTitle = (TextView) toolbar.findViewById(R.id.title);
+        txtTitle.setText("Write Us a Message");
+        txtTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
-        mEditName = (EditText) view.findViewById(R.id.editname);
-        mEditEmail = (EditText) view.findViewById(R.id.editemail);
-        mEditCompany = (EditText) view.findViewById(R.id.editcompany);
-        mEditMobile = (EditText) view.findViewById(R.id.editmobile);
-        mEditDebt = (EditText) view.findViewById(R.id.editdebt);
-        mEditSubject = (EditText) view.findViewById(R.id.editsubject);
+        final EditText mEditName = (EditText) findViewById(R.id.editname);
+        final EditText mEditEmail = (EditText) findViewById(R.id.editemail);
+        final EditText mEditSubject = (EditText) findViewById(R.id.editcompany);
+        final EditText mEditMobile = (EditText) findViewById(R.id.editmobile);
+        final EditText mEditMessage = (EditText) findViewById(R.id.editmessage);
+
 
         mEditMobile.setText("+65 9002");
         Selection.setSelection(mEditMobile.getText(), mEditMobile.getText().length());
-
-
         mEditMobile.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -82,15 +71,12 @@ public class RequestFragment extends Fragment {
 
 
 
-
-        mButtonSend = (Button) view.findViewById(R.id.buttonsend);
-
-        mButtonSend.setOnClickListener(new View.OnClickListener() {
+        Button mButtonSubmit = (Button) findViewById(R.id.button_submit);
+        mButtonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (mEditName.getText().length() != 0 && mEditEmail.getText().length() != 0
-                        && mEditMobile.getText().length() != 0){
+                if (mEditMobile.getText().length() != 0 && mEditEmail.getText().length() != 0){
 
                     Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND, Uri.fromParts(
                             "mailto","abc@gmail.com", null));
@@ -103,8 +89,7 @@ public class RequestFragment extends Fragment {
                             "Name: "+mEditName.getText().toString()+
                                     "  Email: "+mEditEmail.getText().toString()+
                                     "  Mobile: "+mEditMobile.getText().toString()+
-                                    "  Company: "+mEditCompany.getText().toString()+
-                                    "  Debt amount: "+mEditDebt.getText().toString());
+                                    "  Debt Message: "+mEditMessage.getText().toString());
 
                     emailIntent.setType("message/rfc822");
 
@@ -114,12 +99,18 @@ public class RequestFragment extends Fragment {
 
 
 
-
             }
         });
 
 
-        return view;
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
     }
 
 }

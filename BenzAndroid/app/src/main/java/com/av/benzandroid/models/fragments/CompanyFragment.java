@@ -60,9 +60,9 @@ public class CompanyFragment extends Fragment {
 
 
         HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("",R.drawable.banner1);
-        file_maps.put("",R.drawable.banner1);
-        file_maps.put("",R.drawable.banner1);
+        file_maps.put("1",R.drawable.banner01);
+        file_maps.put("2",R.drawable.banner02);
+        file_maps.put("3",R.drawable.banner03);
 
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(getActivity());
@@ -71,7 +71,7 @@ public class CompanyFragment extends Fragment {
 
             textSliderView
                     .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.CenterCrop);
+                    .setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
 
             //add your extra information
             textSliderView.bundle(new Bundle());

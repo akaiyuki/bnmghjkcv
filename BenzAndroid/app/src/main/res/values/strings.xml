@@ -5,4 +5,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="contactus">
+        Contact us at <u>+65 9002 4367</u>
+    </string>
+
+    <string name="emailus">
+        Write us at <u>info@benzrecovery.com.sg</u>
+    </string>
+
 </resources>

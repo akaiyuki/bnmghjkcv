@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -19,7 +20,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.Selection;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -37,6 +43,7 @@ import com.av.benzandroid.R;
 import com.av.benzandroid.functions.BSingleton;
 import com.av.benzandroid.functions.CustomScrollView;
 import com.av.benzandroid.models.activity.MainActivity;
+import com.av.benzandroid.models.activity.WriteMessageActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -61,6 +68,9 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     private GoogleMap mMap;
 
     private ImageView mButtonFloating;
+
+    private TextView mTextContact;
+    private TextView mTextEmail;
 
     public CustomScrollView scrollView;
 
@@ -114,7 +124,10 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
         mButtonFloating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialogMessage();
+//                showDialogMessage();
+
+                startActivity(new Intent(ContactUsFragment.this, WriteMessageActivity.class));
+
             }
         });
 
@@ -129,6 +142,32 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
         });
 
 
+        mTextContact = (TextView) findViewById(R.id.txtcontact);
+        mTextEmail = (TextView) findViewById(R.id.txtemail);
+
+        mTextContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String callForwardString = "+6590024367";
+                Intent intentCallForward = new Intent(Intent.ACTION_DIAL); // ACTION_CALL
+                Uri uri2 = Uri.fromParts("tel", callForwardString, "#");
+                intentCallForward.setData(uri2);
+                startActivity(intentCallForward);
+            }
+        });
+
+        mTextEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent send = new Intent(Intent.ACTION_SENDTO);
+                String uriText = "mailto:" + Uri.encode("info@benzrecovery.com.sg") +
+                        "?subject=" + Uri.encode("Inquire");
+                Uri uri = Uri.parse(uriText);
+
+                send.setData(uri);
+                startActivity(Intent.createChooser(send, "Send mail..."));
+            }
+        });
 
         INSTANCE = this;
 
@@ -138,8 +177,8 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
     @Override
     public void onMapReady(GoogleMap map) {
 
-        double latitude = 1.28449;
-        double longitude = 103.85116;
+        double latitude = 1.2846288;
+        double longitude = 103.8487802;
 
         direction = new LatLng(latitude, longitude);
 
@@ -157,7 +196,7 @@ public class ContactUsFragment extends FragmentActivity implements OnMapReadyCal
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(new LatLng(latitude, longitude))
-                .zoom(12)
+                .zoom(16)
                 .build();
 
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));

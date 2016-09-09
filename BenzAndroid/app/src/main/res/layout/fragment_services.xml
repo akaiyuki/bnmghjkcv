@@ -168,8 +168,56 @@
             android:src="@drawable/bannerservice3"
             android:id="@+id/banner3"
             android:layout_below="@+id/text9"
-            android:scaleType="fitXY"
-            android:layout_marginBottom="50dp"/>
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/text16"
+            android:layout_below="@+id/banner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="International Debt"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text17"
+            android:layout_below="@+id/text16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Collection"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="30dp"
+            android:layout_height="2dip"
+            android:layout_below="@+id/text17"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/text18"
+            android:layout_below="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="We have gone globally to recover your debts regardless of the locations we will help you handle your overseas outstanding debts. Our expertise, together with our partners and associates from various locations all over the globe will work out for you in giving you the ease from outstanding debts overseas."/>
+
+
 
 
         <ImageView
@@ -177,7 +225,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/bannerservice4"
             android:id="@+id/banner4"
-            android:layout_below="@+id/banner3"
+            android:layout_below="@+id/text18"
             android:scaleType="fitXY"/>
 
         <TextView

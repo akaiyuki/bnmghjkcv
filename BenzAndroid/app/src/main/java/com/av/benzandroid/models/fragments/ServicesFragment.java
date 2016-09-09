@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.av.benzandroid.R;
+import com.av.benzandroid.models.activity.WriteMessageActivity;
 
 
 /**
@@ -43,7 +44,8 @@ public class ServicesFragment extends Fragment {
         mButtonFloating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialogMessage();
+//                showDialogMessage();
+                startActivity(new Intent(getActivity(), WriteMessageActivity.class));
             }
         });
 
